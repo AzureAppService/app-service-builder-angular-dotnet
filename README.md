@@ -39,15 +39,17 @@ root `package.json`; run the commands below from the repository root.
 ## Prerequisites
 
 - [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0).
-- [Node.js 24 LTS](https://nodejs.org/) and its bundled npm are recommended.
+- [Node.js 24 LTS](https://nodejs.org/) **24.15.0 or newer** and its bundled npm are recommended.
 - [Git](https://git-scm.com/) and a GitHub account.
 - For deployment: App Service Builder Private Preview access, an authorized
   Azure subscription, and an existing resource group in a supported preview location.
 - Optional: [PowerShell 7](https://learn.microsoft.com/powershell/scripting/install/installing-powershell)
   for the endpoint verification script.
 
-The frontend lockfile contains Angular/Angular CLI **21.2.24** and TypeScript
-**5.9.3**. The API targets `net10.0`; its Builder runtime pin is **10.0.12**.
+The frontend lockfile contains Angular **22.2.4**, Angular CLI/build **22.2.5**,
+and TypeScript **6.0.3**. Angular 22.2 requires TypeScript `>=6.0 <6.1`;
+keep TypeScript on `~6.0.3` rather than bypassing peer-dependency checks.
+The API targets `net10.0`; its Builder runtime pin is **10.0.12**.
 Keep the lockfile and existing .NET package versions during setup.
 
 ## Run locally

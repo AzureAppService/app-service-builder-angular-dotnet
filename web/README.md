@@ -1,6 +1,6 @@
 # Angular frontend
 
-This is the static Angular 21 component of the
+This is the static Angular 22 component of the
 [App Service Builder Angular + ASP.NET Core sample](../README.md).
 
 From the repository root:
