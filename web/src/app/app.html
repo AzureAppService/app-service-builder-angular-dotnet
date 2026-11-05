@@ -1,0 +1,11 @@
+<header class="site-header">
+  <a class="brand" routerLink="/">App Service Builder / Angular + ASP.NET Core</a>
+  <nav aria-label="Primary navigation">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+    <a routerLink="/products/widget-1" routerLinkActive="active">Deep route</a>
+  </nav>
+</header>
+
+<main>
+  <router-outlet />
+</main>

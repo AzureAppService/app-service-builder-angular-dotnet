@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/api/">
+    <Project Path="api/FullstackAngularDotnet.Api/FullstackAngularDotnet.Api.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/FullstackAngularDotnet.Api.Tests/FullstackAngularDotnet.Api.Tests.csproj" />
+  </Folder>
+</Solution>

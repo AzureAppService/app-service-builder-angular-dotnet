@@ -1,0 +1,43 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.site-header {
+  align-items: center;
+  background: #111827;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem clamp(1rem, 5vw, 4rem);
+}
+
+.brand,
+nav a {
+  color: #f9fafb;
+  text-decoration: none;
+}
+
+.brand {
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: #d1d5db;
+}
+
+nav a.active,
+nav a:hover {
+  color: #67e8f9;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 70rem;
+  padding: clamp(2rem, 6vw, 5rem) clamp(1rem, 5vw, 4rem);
+}
+

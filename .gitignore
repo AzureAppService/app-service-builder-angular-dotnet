@@ -1,0 +1,11 @@
+web/node_modules/
+web/.angular/
+web/dist/
+api/**/bin/
+api/**/obj/
+tests/**/bin/
+tests/**/obj/
+.env
+.env.*
+!.env.example
+TestResults/

@@ -1,0 +1,24 @@
+components:
+  - name: web
+    rootDirectory: web
+    role: static
+    platform: nodejs
+    build: >-
+      npm ci
+      && npm run build
+      && mkdir -p "$DESTINATION_DIR/dist/web/browser"
+      && cp -r dist/web/browser/. "$DESTINATION_DIR/dist/web/browser/"
+    output: dist/web/browser
+    path: /
+
+  - name: api
+    rootDirectory: api/FullstackAngularDotnet.Api
+    role: web
+    platform: dotnet
+    platformVersion: "10.0.12"
+    path: /api
+    run:
+      port: 8080
+      start: dotnet FullstackAngularDotnet.Api.dll
+      healthCheckPath: /api/health
+
