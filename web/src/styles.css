@@ -90,3 +90,17 @@ dd {
   color: #b91c1c;
 }
 
+a:focus-visible, button:focus-visible, summary:focus-visible {
+  outline: 3px solid #0e7490;
+  outline-offset: 4px;
+}
+
+button:hover:not(:disabled) { background: #155e75; }
+details { margin-top: 2rem; }
+summary { padding-block: 0.75rem; cursor: pointer; font-weight: 700; }
+code, dd { overflow-wrap: anywhere; }
+
+@media (max-width: 600px) {
+  dl div { grid-template-columns: 1fr; }
+}
+

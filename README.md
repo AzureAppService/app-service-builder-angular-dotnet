@@ -1,5 +1,20 @@
 # App Service Builder: Angular + ASP.NET Core sample
 
+## Local page preview
+
+![Angular root page with in-page API health and status controls, customization help, and separately named documentation links, rendered with the real local ASP.NET Core backend](docs/images/sample.png)
+
+Rendered locally from the production Angular build with the real ASP.NET Core
+backend. Local build, full-stack, and desktop/mobile browser checks passed;
+Azure deployment was not contacted or verified.
+
+The useful frontend is at `/`. **Check API health** shows the `/api/health`
+response in the page, with failure and retry feedback, instead of opening a raw
+endpoint. Process readiness does not verify Azure deployment.
+Expand **Customize this sample** for the frontend and API source paths to edit
+in your own fork. Links distinguish App Service Builder documentation from
+Angular documentation; the page does not edit GitHub or guess your app URL.
+
 A standalone Angular frontend and ASP.NET Core API deployed as two components
 behind one public hostname with
 [Azure App Service Builder](https://builderapps.azure.com/docs/). Angular builds
@@ -46,7 +61,7 @@ root `package.json`; run the commands below from the repository root.
 - Optional: [PowerShell 7](https://learn.microsoft.com/powershell/scripting/install/installing-powershell)
   for the endpoint verification script.
 
-The frontend lockfile contains Angular **22.2.4**, Angular CLI/build **22.2.5**,
+The frontend lockfile contains Angular **22.2.5**, Angular CLI/build **22.2.6**,
 and TypeScript **6.0.3**. Angular 22.2 requires TypeScript `>=6.0 <6.1`;
 keep TypeScript on `~6.0.3` rather than bypassing peer-dependency checks.
 The API targets `net10.0`; its Builder runtime pin is **10.0.12**.
