@@ -45,7 +45,7 @@ type ApiStatus = {
         Edit <code>api/FullstackAngularDotnet.Api/Program.cs</code> to change the API.
         Rebuild, test, commit and redeploy your fork; this page does not edit GitHub.</p>
     </details>
-    <p><a href="https://builderapps.azure.com/docs/">App Service Builder documentation</a>
+    <p><a href="https://builder.appservice.azure.com/docs/">App Service Builder documentation</a>
       · <a href="https://angular.dev/overview">Angular documentation</a></p>
   `,
 })

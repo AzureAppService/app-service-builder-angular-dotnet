@@ -17,7 +17,7 @@ Angular documentation; the page does not edit GitHub or guess your app URL.
 
 A standalone Angular frontend and ASP.NET Core API deployed as two components
 behind one public hostname with
-[Azure App Service Builder](https://builderapps.azure.com/docs/). Angular builds
+[Azure App Service Builder](https://builder.appservice.azure.com/docs/). Angular builds
 into static files; the .NET API runs separately. The browser calls relative
 `/api` URLs, so no CORS configuration, database, external service, or parent
 workspace is required.
@@ -238,7 +238,7 @@ Keep the full `/api` prefix in backend routes; local proxies are not deployment 
 
 ## Deploy your fork through Builder Portal
 
-Follow the [Portal quickstart](https://builderapps.azure.com/docs/quickstarts/portal/)
+Follow the [Portal quickstart](https://builder.appservice.azure.com/docs/quickstarts/portal/)
 for your authorized Private Preview environment:
 
 1. Commit and push the sample to your GitHub repository's `main` branch.
@@ -258,7 +258,7 @@ The optional `DEPLOYMENT_MARKER` variable is read by the running API and returne
 by `/api/health` and `/api/version`. It defaults to `local` and is intentionally
 public. **Never put credentials, connection strings, or private information in it.**
 Configure it for the API through Portal **Variables**, then deploy to apply it.
-See the [variables guide](https://builderapps.azure.com/docs/guides/variables/).
+See the [variables guide](https://builder.appservice.azure.com/docs/guides/variables/).
 The frontend's static version JSON does not read runtime variables.
 
 For code changes, run the checks, commit, and push to your fork's `main` branch.
@@ -273,9 +273,9 @@ Deleting the app does not delete your GitHub repository or local clone.
 
 ## Resources and contributions
 
-- [App Service Builder documentation](https://builderapps.azure.com/docs/)
-- [Sample catalog](https://builderapps.azure.com/docs/samples/)
-- [Manifest guide](https://builderapps.azure.com/docs/guides/builder-yaml/)
+- [App Service Builder documentation](https://builder.appservice.azure.com/docs/)
+- [Sample catalog](https://builder.appservice.azure.com/docs/samples/)
+- [Manifest guide](https://builder.appservice.azure.com/docs/guides/builder-yaml/)
 - [Contributing](CONTRIBUTING.md)
 - [Code of Conduct](.github/CODE_OF_CONDUCT.md)
 - [Security reporting](SECURITY.md)
