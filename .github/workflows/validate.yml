@@ -32,13 +32,15 @@ jobs:
       - run: npm --prefix web run build
       - run: dotnet publish api/FullstackAngularDotnet.Api/FullstackAngularDotnet.Api.csproj --configuration Release --no-restore
       - run: node --test fullstack.test.mjs
-      - name: Export exact locked local-validation prerequisite
+      - name: Export exact locked local-validation prerequisites
         if: github.ref == 'refs/heads/sample-ux-refresh' && runner.os == 'Linux'
-        run: mkdir .validation-prerequisites && npm pack @angular/router@22.2.5 --pack-destination .validation-prerequisites
+        run: |
+          mkdir .validation-prerequisites
+          npm pack --ignore-scripts --pack-destination .validation-prerequisites @angular/common@22.2.5 @angular/compiler@22.2.5 @angular/compiler-cli@22.2.5 @angular/core@22.2.5 @angular/forms@22.2.5 @angular/platform-browser@22.2.5
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         if: github.ref == 'refs/heads/sample-ux-refresh' && runner.os == 'Linux'
         with:
-          name: exact-local-validation-prerequisite
+          name: exact-local-validation-prerequisites
           path: .validation-prerequisites/*
           include-hidden-files: true
           retention-days: 1
