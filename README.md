@@ -1,5 +1,12 @@
 # App Service Builder: Angular + ASP.NET Core sample
 
+The useful frontend is at `/`. **Check API health** shows the `/api/health`
+response in the page, with failure and retry feedback, instead of opening a raw
+endpoint. Process readiness does not verify Azure deployment.
+Expand **Customize this sample** for the frontend and API source paths to edit
+in your own fork. Links distinguish App Service Builder documentation from
+Angular documentation; the page does not edit GitHub or guess your app URL.
+
 A standalone Angular frontend and ASP.NET Core API deployed as two components
 behind one public hostname with
 [Azure App Service Builder](https://builderapps.azure.com/docs/). Angular builds
