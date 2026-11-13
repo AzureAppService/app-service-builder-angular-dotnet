@@ -1,11 +1,18 @@
-<header class="site-header">
-  <a class="brand" routerLink="/">App Service Builder / Angular + ASP.NET Core</a>
+<header class="site-header sample-header">
+  <a class="sample-brand" routerLink="/"><img src="/brand/builder.svg" alt="" width="32" height="32">App Service Builder</a>
   <nav aria-label="Primary navigation">
     <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
     <a routerLink="/products/widget-1" routerLinkActive="active">Deep route</a>
   </nav>
+  <nav aria-label="Documentation">
+    <a href="https://angular.dev/overview">Angular documentation</a>
+    <a href="https://learn.microsoft.com/aspnet/core/">ASP.NET Core documentation</a>
+    <a href="https://builder.appservice.azure.com/docs/">App Service Builder documentation</a>
+  </nav>
 </header>
 
-<main>
+<main class="sample-sheet">
+  <div class="sample-content">
   <router-outlet />
+  </div>
 </main>

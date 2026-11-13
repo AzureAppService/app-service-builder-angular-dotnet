@@ -4,7 +4,8 @@
 
 ![Angular root page with in-page API health and status controls, customization help, and separately named documentation links, rendered with the real local ASP.NET Core backend](docs/images/sample.png)
 
-Rendered locally from the production Angular build with the real ASP.NET Core
+**LOCAL — Microsoft Edge, 1440px desktop, root `/`.**
+Rendered from the production Angular build with the real ASP.NET Core
 backend. Local build, full-stack, and desktop/mobile browser checks passed;
 Azure deployment was not contacted or verified.
 
@@ -14,6 +15,22 @@ endpoint. Process readiness does not verify Azure deployment.
 Expand **Customize this sample** for the frontend and API source paths to edit
 in your own fork. Links distinguish App Service Builder documentation from
 Angular documentation; the page does not edit GitHub or guess your app URL.
+
+The Angular/.NET daylight composition preserves the real API status, inline
+health and retry feedback, and Angular Router paths. Edit
+`web/src/app/pages/home.ts` for content and `web/public/brand/family.v1.css` for
+the visual family; baseline styles remain in `web/src/styles.css`.
+ASP.NET Core documentation is separate from Builder guidance.
+
+### Logo provenance
+
+`web/public/brand/builder.svg` is the supplied official App Service Builder mark.
+`angular.png` is the unmodified [official Angular gradient wordmark](https://angular.dev/assets/images/press-kit/angular_wordmark_gradient.png)
+from the [Angular press kit](https://angular.dev/press-kit);
+`dotnet.svg` is the unmodified [official .NET SVG](https://raw.githubusercontent.com/dotnet/brand/main/logo/dotnet-logo.svg)
+from [dotnet/brand](https://github.com/dotnet/brand).
+Angular is a trademark of Google LLC; .NET is a trademark of Microsoft.
+Logos identify the stack; no endorsement is implied.
 
 A standalone Angular frontend and ASP.NET Core API deployed as two components
 behind one public hostname with

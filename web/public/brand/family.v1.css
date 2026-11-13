@@ -1,0 +1,40 @@
+html body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 0 10%,#dceaff,transparent 60%),radial-gradient(ellipse at 100% 85%,#e8e0fa,transparent 60%),#eff3fc;color:#23314c;font-family:"Segoe UI",system-ui,sans-serif;font-size:15px;--accent:#6651a3;--line:#e4e8f2}
+app-root main.sample-sheet{width:min(1100px,calc(100% - 64px));margin:32px auto;padding:0;background:#fff;border:1px solid #ffffffbd;border-radius:0 0 24px 24px;box-shadow:0 22px 65px #3b487515;overflow:hidden}
+header.site-header.sample-header{width:min(1100px,calc(100% - 64px));margin:32px auto -33px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:25px 32px;border:1px solid #fff;border-bottom:1px solid var(--line);border-radius:24px 24px 0 0;background:#fff}
+.sample-brand{display:flex;align-items:center;gap:12px;font-size:17px;font-weight:650;letter-spacing:-.02em;color:#23314c;text-decoration:none}
+.sample-brand img{width:32px;height:32px;object-fit:contain}
+.sample-header nav{display:flex;flex-wrap:wrap;gap:16px;margin:0;font-size:12px}
+.sample-header a{color:#455674;text-underline-offset:4px}
+header.site-header.sample-header nav a{color:#455674}
+header.site-header.sample-header nav a:hover,header.site-header.sample-header nav a.active{color:var(--accent);text-decoration:underline}
+.sample-content{padding:40px 42px}
+.ecosystem-logo{display:flex;align-items:center;gap:14px;margin-bottom:24px;color:var(--accent);font-size:23px;font-weight:650;letter-spacing:-.03em}
+.ecosystem-logo img{width:52px;height:52px;object-fit:contain}
+.ecosystem-logo img.wordmark{width:156px}
+.sample-content h1{max-width:none;color:#23314c;font-size:clamp(32px,4.2vw,54px);line-height:1.1;letter-spacing:-.04em;font-weight:650;margin:0 0 20px;text-wrap:balance}
+.sample-content h2{font-size:18px;font-weight:650;letter-spacing:-.02em;margin:0 0 14px}
+.sample-content p{font-size:15px;line-height:1.8;color:#596b86}
+.sample-content .eyebrow{color:var(--accent);font-size:12px;font-weight:650;letter-spacing:.04em;margin:0 0 14px}
+.sample-content nav{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:24px 0 16px}
+.sample-content a{color:var(--accent);text-underline-offset:4px}
+.sample-content button{min-height:44px;margin:12px 8px 0 0;padding:12px 18px;border:1px solid var(--accent);border-radius:10px;background:var(--accent);color:#fff;font:inherit;font-size:13px;font-weight:600;cursor:pointer}
+.sample-content button:hover{filter:brightness(.92);background:var(--accent)}
+.sample-content button:disabled{opacity:.6;cursor:wait}
+.sample-content dl{display:grid;gap:16px;margin:24px 0 0;padding-top:24px;border-top:1px solid var(--line);font-size:12px}
+.sample-content dl div{display:grid;grid-template-columns:90px 1fr;gap:16px}
+.sample-content dt{color:#435675;font-weight:600}
+.sample-content dd{margin:0;color:#62718a;overflow-wrap:anywhere}
+.sample-content details{margin-top:24px;padding:12px 0;border-block:1px solid var(--line);font-size:12px}
+.sample-content details p{font-size:12px}
+.sample-content summary{cursor:pointer;font-weight:600;min-height:44px;align-content:center}
+.sample-content code{font-size:12px;overflow-wrap:anywhere}
+.sample-content .documentation{font-size:12px;justify-content:space-between}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #7660d0;outline-offset:4px}
+.sample-content{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:0 40px;background:radial-gradient(ellipse at 80% 0,#f2edfc,transparent 60%),#fff}
+.sample-content app-home>.hero{grid-column:1}
+.sample-content>app-home{display:contents}
+.sample-content>router-outlet{display:none}
+.sample-content app-home>.status-card{grid-column:2;margin:0;padding:26px;background:#f4f1fa;border:1px solid #e5def2;border-radius:16px;box-shadow:none;align-self:start}
+.sample-content .hero>p[role=status]{font-size:12px}
+.sample-content app-home>details{grid-column:1/-1}
+@media(max-width:650px){app-root main.sample-sheet{width:calc(100% - 30px);margin:18px auto;border-radius:0 0 19px 19px}header.site-header.sample-header{width:calc(100% - 30px);margin:18px auto -19px;padding:22px;flex-wrap:wrap;gap:18px;border-radius:19px 19px 0 0}.sample-header nav{width:100%;gap:12px;font-size:11px}.sample-content{display:block;padding:32px 22px}.sample-content h1{font-size:36px}.sample-content dl div{grid-template-columns:1fr;gap:4px}.sample-content nav{align-items:stretch}.sample-content .documentation{gap:14px}.sample-content app-home>.status-card{margin:24px 0}.ecosystem-logo{flex-wrap:wrap}}

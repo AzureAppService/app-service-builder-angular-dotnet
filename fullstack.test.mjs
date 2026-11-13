@@ -40,7 +40,7 @@ test('frontend build contains static assets and public identity', async () => {
   assert.ok(entries.includes('favicon.ico'))
   assert.ok(entries.some((name) => name.endsWith('.js')))
   assert.ok(entries.some((name) => name.endsWith('.css')))
-  assert.ok(entries.every((name) => /\.(html|js|css|json|ico)$/.test(name)))
+  assert.ok(entries.every((name) => name === 'brand' || /\.(html|js|css|json|ico)$/.test(name)))
   assert.deepEqual(JSON.parse(await readFile(new URL('version.json', root), 'utf8')), {
     app: 'app-service-builder-angular-dotnet-web',
     version: '1.0.0',
@@ -117,11 +117,14 @@ test('built Angular frontend and published API share one origin', { timeout: 300
   for (const [asset, contentType] of [
     ...scripts.map((asset) => [asset, /javascript/]),
     ...styles.map((asset) => [asset, /text\/css/]),
+    ['/brand/builder.svg', /image\/svg\+xml/],
+    ['/brand/angular.png', /image\/png/],
+    ['/brand/dotnet.svg', /image\/svg\+xml/],
   ]) {
     const response = await fetch(new URL(asset, `${origin}/`))
     assert.equal(response.status, 200)
     assert.match(response.headers.get('content-type'), contentType)
-    assert.ok((await response.text()).length > 0)
+    assert.ok((await response.arrayBuffer()).byteLength > 0)
   }
   for (const [path, expected] of [
     ['/version.json', { app: 'app-service-builder-angular-dotnet-web' }],

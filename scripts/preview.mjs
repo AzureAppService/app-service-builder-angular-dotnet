@@ -9,6 +9,8 @@ const contentTypes = {
   '.css': 'text/css; charset=utf-8',
   '.json': 'application/json',
   '.ico': 'image/x-icon',
+  '.svg': 'image/svg+xml',
+  '.png': 'image/png',
 }
 
 export async function createPreviewServer(apiTarget) {

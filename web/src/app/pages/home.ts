@@ -11,6 +11,7 @@ type ApiStatus = {
   selector: 'app-home',
   template: `
     <section class="hero">
+      <div class="ecosystem-logo"><img class="wordmark" src="/brand/angular.png" alt="Angular" width="156" height="52"><span>+</span><img src="/brand/dotnet.svg" alt=".NET" width="52" height="52"></div>
       <p class="eyebrow">Frontend + API</p>
       <h1>Angular and ASP.NET Core full-stack app</h1>
       <p>
@@ -42,11 +43,17 @@ type ApiStatus = {
     <details>
       <summary>Customize this sample</summary>
       <p>Edit <code>web/src/app/pages/home.ts</code> in your own fork to change this page.
+        Edit <code>web/public/brand/family.v1.css</code> for its styles.
         Edit <code>api/FullstackAngularDotnet.Api/Program.cs</code> to change the API.
         Rebuild, test, commit and redeploy your fork; this page does not edit GitHub.</p>
     </details>
-    <p><a href="https://builder.appservice.azure.com/docs/">App Service Builder documentation</a>
-      · <a href="https://angular.dev/overview">Angular documentation</a></p>
+    <details>
+      <summary>Logo sources &amp; notices</summary>
+      <p>Unmodified <a href="https://angular.dev/press-kit">Angular press-kit artwork</a>
+        and <a href="https://github.com/dotnet/brand">.NET artwork</a> identify this stack.
+        Angular is a trademark of Google LLC; .NET is a trademark of Microsoft.
+        App Service Builder uses its supplied official mark. No endorsement implied.</p>
+    </details>
   `,
 })
 export class Home {
