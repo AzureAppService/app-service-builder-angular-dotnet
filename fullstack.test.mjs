@@ -120,6 +120,7 @@ test('built Angular frontend and published API share one origin', { timeout: 300
     ['/brand/builder.svg', /image\/svg\+xml/],
     ['/brand/angular.png', /image\/png/],
     ['/brand/dotnet.svg', /image\/svg\+xml/],
+    ['/brand/angular-dotnet-waves.svg', /image\/svg\+xml/],
   ]) {
     const response = await fetch(new URL(asset, `${origin}/`))
     assert.equal(response.status, 200)
