@@ -78,7 +78,7 @@ root `package.json`; run the commands below from the repository root.
 - Optional: [PowerShell 7](https://learn.microsoft.com/powershell/scripting/install/installing-powershell)
   for the endpoint verification script.
 
-The frontend lockfile contains Angular **22.2.5**, Angular CLI/build **22.2.6**,
+The frontend lockfile contains Angular **22.2.6**, Angular CLI/build **22.2.7**,
 and TypeScript **6.0.3**. Angular 22.2 requires TypeScript `>=6.0 <6.1`;
 keep TypeScript on `~6.0.3` rather than bypassing peer-dependency checks.
 The API targets `net10.0`; its Builder runtime pin is **10.0.12**.
