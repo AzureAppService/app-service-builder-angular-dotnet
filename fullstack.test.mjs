@@ -25,7 +25,7 @@ test('manifest preserves explicit Angular output and separate API routing', asyn
     rootDirectory: api/FullstackAngularDotnet.Api
     role: web
     platform: dotnet
-    platformVersion: "10.0.12"
+    platformVersion: "10"
     path: /api
     run:
       port: 8080
