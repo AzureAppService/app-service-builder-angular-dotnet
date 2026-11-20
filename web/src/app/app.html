@@ -4,15 +4,25 @@
     <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
     <a routerLink="/products/widget-1" routerLinkActive="active">Deep route</a>
   </nav>
-  <nav aria-label="Documentation">
-    <a href="https://angular.dev/overview">Angular documentation</a>
-    <a href="https://learn.microsoft.com/aspnet/core/">ASP.NET Core documentation</a>
-    <a href="https://builder.appservice.azure.com/docs/">App Service Builder documentation</a>
-  </nav>
+  @if (showHeaderDocumentation()) {
+    <app-documentation-links />
+  }
 </header>
 
 <main class="sample-sheet">
   <div class="sample-content">
-  <router-outlet />
+  <router-outlet (activate)="onRouteActivate($event)" />
   </div>
 </main>
+
+@if (!showHeaderDocumentation()) {
+  <footer class="sample-footer">
+    <details>
+      <summary>Logo sources &amp; notices</summary>
+      <p>Unmodified <a href="https://angular.dev/press-kit">Angular press-kit artwork</a>
+        and <a href="https://github.com/dotnet/brand">.NET artwork</a> identify this stack.
+        Angular is a trademark of Google LLC; .NET is a trademark of Microsoft.
+        App Service Builder uses its supplied official mark. No endorsement implied.</p>
+    </details>
+  </footer>
+}
